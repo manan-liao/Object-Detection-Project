@@ -32,7 +32,7 @@ function gotResult(error,results){
 function draw(){
     image(img,0,0,640,420);
     fill("blue");
-    text("Laptop",200,100);
+    text("Fruit Basket",200,100);
     textSize(20);
     noFill();
     stroke("green");
@@ -43,18 +43,5 @@ function draw(){
     noFill();
     stroke("orange");
     rect(300,260,170,100);
-    image(img,0,0,640,420);
-    if(status != ""){
-        for(i = 0;i < objects.length;i++){
-            document.getElementById("status").innerHTML = "status-object detected";
-            fill("blue");
-            textSize(20);
-            percent = floor(objects[i].confidence * 100);
-            text(objects[i].label+" "+percent+"%",objects[i].x+15,objects[i].y+15);
-            noFill();
-            stroke("green");
-            rect(objects[i].x,objects[i].y,objects[i].width,objects[i].height);
-        }
-    }
 }
 
